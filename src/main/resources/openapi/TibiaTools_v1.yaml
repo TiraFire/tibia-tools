@@ -1,0 +1,67 @@
+openapi: 3.0.3
+info:
+  title: Tibia Tools
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.11
+servers:
+  - url: http://www.anonymousmoose.ca/
+paths:
+  /points/health:
+    get:
+      parameters:
+        - in: query
+          name: vocation
+          required: true
+          schema:
+            $ref: '#/components/schemas/Vocation'
+        - in: query
+          name: level
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: OK
+  /points/mana:
+    get:
+      parameters:
+        - in: query
+          name: vocation
+          required: true
+          schema:
+            $ref: '#/components/schemas/Vocation'
+        - in: query
+          name: level
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: OK
+  /points/experience:
+    get:
+      parameters:
+        - in: query
+          name: vocation
+          required: true
+          schema:
+            $ref: '#/components/schemas/Vocation'
+        - in: query
+          name: level
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: OK
+
+components:
+  schemas:
+    Vocation:
+      enum:
+        - Druid
+        - Sorcerer
+        - Knight
+        - Paladin

@@ -1,0 +1,12 @@
+GET {{url}}/points/experience?vocation=Sorcerer&level=123
+Accept: application/json
+
+###
+GET {{url}}/points/mana?vocation=Sorcerer&level=123
+Accept: application/json
+
+###
+GET {{url}}/points/health?vocation=Sorcerer&level=123
+Accept: application/json
+
+###
